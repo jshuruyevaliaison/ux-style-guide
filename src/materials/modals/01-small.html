@@ -1,0 +1,31 @@
+
+<button class="trigger button-primary button-large">Click here to trigger the modal!</button>
+ <div class="modal">
+		 <div class="modal-content">
+				 <h3>Hello, I am a modal!</h3>
+				 <p>This is the modal body text.</p>
+				 <div class="modal-buttons">
+           <a class="close-button button-minimal">Close</a>
+         </div>
+		 </div>
+ </div>
+
+<script>
+var modal = document.querySelector(".modal");
+    var trigger = document.querySelector(".trigger");
+    var closeButton = document.querySelector(".close-button");
+
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    }
+
+    trigger.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+</script>

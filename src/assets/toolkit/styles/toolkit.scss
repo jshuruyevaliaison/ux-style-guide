@@ -1,0 +1,31 @@
+/**
+ * Toolkit styles
+ */
+
+ @font-face {
+     font-family: "scala-sans-reg";
+     src: url("../resources/fonts/scala/ScalaSansWeb.woff") format('woff');
+ }
+
+ @font-face {
+     font-family: "scala-sans-bld";
+     src: url("../resources/fonts/scala/ScalaSansWeb-Bold.woff") format('woff');
+ }
+
+ @font-face {
+ 	font-family: "scala-reg";
+   src: url("../resources/fonts/scala/ScalaWeb.woff") format('woff');
+ }
+
+@import '../resources/fonts/fontawesome/css/all.css';
+
+@import 'partials/_colors';
+@import 'partials/_buttons';
+@import 'partials/_inputs';
+@import 'partials/_modals';
+@import 'partials/_typography';
+
+
+body {
+  font-family: scala-sans-reg;
+}

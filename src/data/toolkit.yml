@@ -1,0 +1,9 @@
+colors:
+  primary:
+    Primary Blue: "#0076C0"
+    Secondary Blue: "#234078"
+  secondary:
+    Light Gray: "#F7F7FB"
+    Gray: "#C8C8CE"
+    Medium Gray: "#75757D"
+    Dark Gray: "#383D45"

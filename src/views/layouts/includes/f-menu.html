@@ -1,0 +1,53 @@
+<!-- fabricator menu -->
+<div class="f-menu">
+
+	{{> f-controls}}
+	<ul>
+		<li style="text-align: center;">
+			<img src="assets/toolkit/resources/images/liaison-logo.png" width="200px">
+		</li>
+	</ul>
+
+	<ul>
+
+		<li>
+			<a href="index.html" class="f-menu__heading">Overview</a>
+		</li>
+
+		<li>
+			<a href="colors.html" class="f-menu__heading">Colors</a>
+		</li>
+
+		{{#each materials}}
+		<li>
+			<a href="{{@key}}.html" class="f-menu__heading">{{name}}</a>
+			<ul>
+				{{#each items}}
+				<li>
+					<a href="{{@../key}}.html#{{@key}}">{{name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</li>
+		{{/each}}
+
+		{{#each views}}
+		<li>
+			<a href="{{@key}}.html" class="f-menu__heading">{{name}}</a>
+			<ul>
+				{{#each items}}
+				<li>
+					<a href="{{@../key}}/{{@key}}.html" target="_blank">{{name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</li>
+		{{/each}}
+
+
+
+	</ul>
+
+
+</div>
+<!-- /fabricator menu -->

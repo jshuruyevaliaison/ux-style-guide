@@ -1,0 +1,110 @@
+/**
+ * Button styles
+ */
+a.button {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.9em 1em;
+  vertical-align: middle;
+  margin: 0 0 1rem;
+  text-align: center;
+  border-radius: 4px;
+  font-family: scala-sans-reg;
+  color: $white;
+  background-color: $primary-blue;
+  border: 1px solid $primary-blue;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-blue;
+    color: $white;
+    text-decoration: none;
+  }
+
+  /* Colors */
+
+  &.primary {
+    color: $white;
+    background-color: $primary-blue;
+    border: 1px solid $primary-blue;
+
+    &:hover {
+      background-color: $secondary-blue;
+      color: $white;
+    }
+  }
+
+  &.secondary {
+    color: $primary-blue;
+    background-color: $white;
+    border: 1px solid $primary-blue;
+
+    &:hover {
+      background-color: rgba(0, 118, 192, 0.05); /*change to hex*/
+      color: $primary-blue;
+    }
+  }
+  &.destructive {
+    color: $red;
+    background-color: $white;
+    border: 1px solid $red;
+
+    &:hover {
+      background-color: #f7eff2;
+      color: $red;
+    }
+  }
+
+  &.disabled {
+    color: $white;
+    background-color: $gray;
+    border: 1px solid $gray;
+
+    &:hover{
+      cursor: default;
+    }
+  }
+
+
+  /* Sizes */
+
+  &.large {
+    font-size: 1.25rem;
+    padding: 1em 0.9em;
+  }
+
+  &.medium {
+    font-size: 1rem;
+    padding: 0.9em 1em;
+  }
+
+  &.small {
+    font-size: 0.8rem;
+    padding: 1em 0.8em;
+  }
+
+  &.tiny {
+    font-size: 0.7rem;
+    padding: 0.7em 0.8em;
+  }
+
+  &.expand {
+    display: block;
+    width: 100%;
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+
+  /*Border Radius */
+
+  &.no-radius {
+    border-radius: 0px;
+  }
+
+  &.pill {
+    border-radius: 50px;
+  }
+
+
+}

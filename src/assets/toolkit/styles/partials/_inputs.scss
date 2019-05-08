@@ -1,0 +1,266 @@
+/**
+ * Input Styles
+ */
+
+input[type=text], label {
+     display:block;
+ }
+
+input[type=text] {
+    border: 1px solid $gray;
+    width: 550px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: scala-sans-reg;
+    margin-top: 10px;
+ }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $gray;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $gray;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $gray;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $gray;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid $gray;
+    width: 570px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: scala-sans-reg;
+    margin-top: 10px;
+    -webkit-border-radius: 0px;
+    background-color: $white;
+}
+
+.selectdiv {
+  position: relative;
+}
+
+/*To remove button from IE11, thank you Matt */
+select::-ms-expand {
+     display: none;
+}
+
+.selectdiv:after {
+  content: '▾';
+  font-family: scala-sans-reg;
+  color: $dark-gray;
+  left: 550px;
+  top: 20px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid $gray;
+  width: 570px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: scala-sans-reg;
+  margin-top: 10px;
+  -webkit-border-radius: 0px;
+  background-color: $white;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
+select-old{
+  border: 1px solid $gray;
+  width: 570px;
+  height: 34px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: scala-sans-reg;
+  margin-top: 10px;
+  -webkit-border-radius: 0px;
+  background-color: $white;
+}
+
+textarea{
+  border: 1px solid $gray;
+  width: 550px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: scala-sans-reg;
+  margin-top: 10px;
+}
+
+/* Checkbox */
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+    display: none;
+}
+
+.checkbox label {
+    position: relative;
+    display: inline-block;
+
+    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+    padding-left: 22px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+    content: "";
+
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox label::before{
+    height: 17px;
+    width: 17px;
+
+    border: 1px solid $dark-gray;
+    left: 0px;
+
+    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+    top: -3px;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox label::after {
+    height: 5px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+
+    transform: rotate(-45deg);
+
+    left: 4px;
+    top: 1px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+    color: $primary-blue;
+}
+
+.checkbox input[type="checkbox"]:checked + label::before {
+    border-color: $primary-blue;
+}
+
+/* Radio Buttons */
+.control {
+	font-size: 18px;
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background: #e6e6e6;
+}
+
+.control--radio .control__indicator {
+	border-radius: 50%;
+}
+
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	background: $light-gray;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+	background: $primary-blue;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+	background: $primary-blue;
+}
+
+/* Disabled state */
+.control input:disabled ~ .control__indicator {
+	pointer-events: none;
+	opacity: .6;
+	background: $light-gray;
+}
+
+/* Check mark */
+.control__indicator:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+	display: block;
+}
+
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+	top: 4px;
+	left: 8px;
+	width: 3px;
+	height: 8px;
+	transform: rotate(45deg);
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+}
+
+/* Disabled tick colour */
+.control--checkbox input:disabled ~ .control__indicator:after {
+	border-color: #7b7b7b;
+}
+
+/* Radio button inner circle */
+.control--radio .control__indicator:after {
+	top: 7px;
+	left: 7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #fff;
+}
+
+/* Disabled circle colour */
+.control--radio input:disabled ~ .control__indicator:after {
+	background: #7b7b7b;
+}
