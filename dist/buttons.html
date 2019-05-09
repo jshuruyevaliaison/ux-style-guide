@@ -76,6 +76,9 @@
 					<a href="buttons.html" class="f-menu__heading">Buttons</a>
 					<ul>
 						<li>
+							<a href="buttons.html#00-default-button">Default Button</a>
+						</li>
+						<li>
 							<a href="buttons.html#01-sizes">Sizes</a>
 						</li>
 						<li>
@@ -154,6 +157,64 @@
 <h1 data-f-toggle="labels">Buttons</h1>
 
 
+<div class="f-item-group" id="00-default-button">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Default Button</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<a class="button">Default Button</a>
+</div>
+
+<div class="f-item-notes" data-f-toggle="notes">
+	<h5>Details:</h5>
+	<p>This is the default button, no frills or modifying classes.</p>
+
+</div>
+
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<h5>CSS</h5>
+		<pre><code class="language-markup"><code>/* Button styles */
+a.button {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.9em 1em;
+  vertical-align: middle;
+  margin: 0 0 1rem;
+  text-align: center;
+  border-radius: 4px;
+  font-family: scala-sans-reg;
+  color: $white;
+  background-color: $primary-blue;
+  border: 1px solid $primary-blue;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-blue;
+    color: $white;
+    text-decoration: none;
+  }</code>
+</code></pre>
+	<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;a class&#x3D;&quot;button&quot;&gt;Default Button&lt;/a&gt;</code></pre>
+</div>
+
+
+</div>
+
+
 <div class="f-item-group" id="01-sizes">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
@@ -186,10 +247,30 @@
 
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<h5>CSS</h5>
-		<pre><code class="language-markup">example css
+		<pre><code class="language-markup"><code>/* Button Sizes */
+
+&.large {
+  font-size: 1.25rem;
+  padding: 1em 0.9em;
+}
+
+&.medium {
+  font-size: 1rem;
+  padding: 0.9em 1em;
+}
+
+&.small {
+  font-size: 0.8rem;
+  padding: 1em 0.8em;
+}
+
+&.tiny {
+  font-size: 0.7rem;
+  padding: 0.7em 0.8em;
+}</code>
 </code></pre>
 	<h5>HTML</h5>
-	<pre><code class="language-markup">&lt;a class&#x3D;&quot;button large&quot;&gt;Large Button&lt;/a&gt;
+		<pre><code class="language-markup">&lt;a class&#x3D;&quot;button large&quot;&gt;Large Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button medium&quot;&gt;Medium Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button small&quot;&gt;Small Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button tiny&quot;&gt;Tiny Button&lt;/a&gt;</code></pre>
@@ -230,10 +311,8 @@
 
 
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<h5>CSS</h5>
-		<pre><code class="language-markup"></code></pre>
 	<h5>HTML</h5>
-	<pre><code class="language-markup">&lt;a class&#x3D;&quot;button primary&quot;&gt;Primary Button&lt;/a&gt;
+		<pre><code class="language-markup">&lt;a class&#x3D;&quot;button primary&quot;&gt;Primary Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button secondary&quot;&gt;Secondary Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button destructive&quot;&gt;Destructive Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button disabled&quot;&gt;Disabled Button&lt;/a&gt;</code></pre>
@@ -289,10 +368,8 @@ The take up 100% of the width of their parent element.</p>
 
 
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<h5>CSS</h5>
-		<pre><code class="language-markup"></code></pre>
 	<h5>HTML</h5>
-	<pre><code class="language-markup">&lt;a class&#x3D;&quot;button large expand&quot;&gt;Expanded Large Button&lt;/a&gt;
+		<pre><code class="language-markup">&lt;a class&#x3D;&quot;button large expand&quot;&gt;Expanded Large Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button tiny expand&quot;&gt;Expanded Tiny Button&lt;/a&gt;
 &lt;br /&gt;&lt;br /&gt;
 &lt;h4&gt;Table with Expanded Buttons&lt;/h4&gt;
@@ -347,10 +424,8 @@ The take up 100% of the width of their parent element.</p>
 
 
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<h5>CSS</h5>
-		<pre><code class="language-markup"></code></pre>
 	<h5>HTML</h5>
-	<pre><code class="language-markup">&lt;a class&#x3D;&quot;button&quot;&gt;Default Button&lt;/a&gt;
+		<pre><code class="language-markup">&lt;a class&#x3D;&quot;button&quot;&gt;Default Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button large secondary&quot;&gt;Secondary Large Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button tiny destructive&quot;&gt;Destructive Tiny Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button small disabled expand&quot;&gt;Disabled Expanded Small Button&lt;/a&gt;</code></pre>
@@ -401,10 +476,8 @@ The take up 100% of the width of their parent element.</p>
 
 
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<h5>CSS</h5>
-		<pre><code class="language-markup"></code></pre>
 	<h5>HTML</h5>
-	<pre><code class="language-markup">&lt;h4&gt;0px Radius&lt;/h4&gt;
+		<pre><code class="language-markup">&lt;h4&gt;0px Radius&lt;/h4&gt;
 &lt;a class&#x3D;&quot;button no-radius&quot;&gt;Default Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button large secondary no-radius&quot;&gt;Secondary Large Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button tiny destructive no-radius&quot;&gt;Destructive Tiny Button&lt;/a&gt;
