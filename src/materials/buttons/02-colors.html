@@ -1,6 +1,50 @@
 ---
 notes: |
   Primary is the default button color if no color is specified.
+styles: |
+  <code>/* Button Colors */
+
+  &.primary {
+    color: $white;
+    background-color: $primary-blue;
+    border: 1px solid $primary-blue;
+
+    &:hover {
+      background-color: $secondary-blue;
+      color: $white;
+    }
+  }
+
+  &.secondary {
+    color: $primary-blue;
+    background-color: $white;
+    border: 1px solid $primary-blue;
+
+    &:hover {
+      background-color: rgba(0, 118, 192, 0.05); /*change to hex*/
+      color: $primary-blue;
+    }
+  }
+  &.destructive {
+    color: $red;
+    background-color: $white;
+    border: 1px solid $red;
+
+    &:hover {
+      background-color: #f7eff2;
+      color: $red;
+    }
+  }
+
+  &.disabled {
+    color: $white;
+    background-color: $gray;
+    border: 1px solid $gray;
+
+    &:hover{
+      cursor: default;
+    }
+  }</code>
 ---
 
 <a class="button primary">Primary Button</a>
