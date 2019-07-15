@@ -5,7 +5,7 @@ a.button,
 button {
   display: inline-block;
   font-size: 1em;
-  padding: 0.8em 0.8em;
+  padding: 0.8em;
   vertical-align: middle;
   margin: 0 0 1em;
   text-align: center;
@@ -21,9 +21,7 @@ button {
     color: $white;
     text-decoration: none;
   }
-
   /* Button Colors */
-
   &.primary {
     color: $white;
     background-color: $primary-blue;
@@ -41,10 +39,12 @@ button {
     border: 1px solid $primary-blue;
 
     &:hover {
-      background-color: rgba(0, 118, 192, 0.05); /*change to hex*/
+      background-color: rgba(0, 118, 192, 0.05);
+      /*change to hex*/
       color: $primary-blue;
     }
   }
+
   &.destructive {
     color: $red;
     background-color: $white;
@@ -61,54 +61,106 @@ button {
     background-color: $gray;
     border: 1px solid $gray;
 
-    &:hover{
+    &:hover {
       cursor: default;
     }
   }
-
-
   /* Button Sizes */
-
   &.large {
     font-size: 20px;
-    padding: 20px 20px;
+    padding: 20px;
     min-width: 250px;
   }
 
   &.medium {
     font-size: 16px;
-    padding: 13px 13px;
+    padding: 13px;
     min-width: 250px;
   }
 
   &.small {
     font-size: 14px;
-    padding: 9px 9px;
+    padding: 9px;
     min-width: 175px;
   }
 
   &.tiny {
     font-size: 13px;
-    padding: 5px 5px;
+    padding: 5px;
   }
 
   &.expand {
     display: block;
     width: 100%;
-    padding-right: 0em;
-    padding-left: 0em;
+    padding-right: 0;
+    padding-left: 0;
   }
-
-
   /*Border Radius */
-
   &.no-radius {
-    border-radius: 0px;
+    border-radius: 0;
   }
 
   &.pill {
     border-radius: 50px;
   }
+}
 
+/* Minimal Buttons */
 
+a.button-minimal,
+button.button-minimal{
+  font-size: 16px;
+  font-family: scala-sans-reg;
+  font-weight: bold;
+  color: $primary-blue;
+  padding: 10px;
+  border-radius: 4px;
+
+  &:hover{
+    background-color: #f7f7fb;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  /* Minimal Button Sizes */
+  &.large {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  &.medium {
+    font-size: 16px;
+    padding: 13px;
+  }
+
+  &.small {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  &.tiny {
+    font-size: 13px;
+    padding: 5px;
+  }
+
+  /* Minimal Button Colors */
+  &.primary {
+    color: $primary-blue;
+
+    &:hover {
+      background-color: #f7f7fb;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  &.destructive {
+    color: $red;
+
+    &:hover {
+      background-color: #f7f7fb;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
 }

@@ -1,0 +1,25 @@
+---
+notes: |
+  This is the default minimal button. Only text shows up, however a light grey background does show up on hover. This button style is to be used when there are too many potential actions on a page to give them all a normal button treatment, as well as the bottom buttons inside modals.
+styles: |
+  <code>/*
+   * Minimal Button Styles
+   */
+   .button-minimal{
+     font-size: 18px;
+     font-family: scala-sans-reg;
+     font-weight: bold;
+     color: $primary-blue;
+     padding: 10px;
+     border-radius: 4px;
+
+     &:hover{
+       background-color: #f7f7fb;
+       cursor: pointer;
+       text-decoration: none;
+     }
+   }</code>
+---
+
+
+<a class="button-minimal">Minimal Button</a>

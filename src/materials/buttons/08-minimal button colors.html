@@ -1,0 +1,31 @@
+---
+notes: |
+  Minimal buttons can be either the primary color (most common use) or the destructive color (for destructive actions such as deleting something.)
+styles: |
+  <code>/*
+   * Minimal Button Colors
+   */
+   &.primary {
+     color: $primary-blue;
+
+     &:hover {
+       background-color: #f7f7fb;
+       cursor: pointer;
+       text-decoration: none;
+     }
+   }
+
+   &.destructive {
+     color: $red;
+
+     &:hover {
+       background-color: #f7f7fb;
+       cursor: pointer;
+       text-decoration: none;
+     }
+   }</code>
+---
+
+
+<a class="button-minimal primary">Primary Minimal Button</a>
+<a class="button-minimal destructive">Destructive Minimal Button</a>

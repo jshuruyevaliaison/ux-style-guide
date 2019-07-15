@@ -3,6 +3,11 @@
  */
 
 h1{
+  font-family: 'scala-sans-reg', serif;
+  font-size: 50px;
+}
+
+h1.serif{
   font-family: 'scala-reg', serif;
   font-size: 50px;
 }
@@ -38,7 +43,7 @@ h6{
 p{
   font-family: 'scala-sans-reg';
   font-size: 15px;
-  line-height: 20px;
+  line-height: 21px;
 }
 
 a{

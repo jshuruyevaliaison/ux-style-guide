@@ -93,6 +93,18 @@
 						<li>
 							<a href="buttons.html#05-radius-options">Radius Options</a>
 						</li>
+						<li>
+							<a href="buttons.html#06-minimal-buttons">Minimal Buttons</a>
+						</li>
+						<li>
+							<a href="buttons.html#07-minimal-button-sizes">Minimal Button Sizes</a>
+						</li>
+						<li>
+							<a href="buttons.html#08-minimal-button-colors">Minimal Button Colors</a>
+						</li>
+						<li>
+							<a href="buttons.html#09-minimal-buttons-with-icons">Minimal Buttons With Icons</a>
+						</li>
 					</ul>
 				</li>
 				<li>
@@ -120,6 +132,9 @@
 					<ul>
 						<li>
 							<a href="modals.html#01-small">Small</a>
+						</li>
+						<li>
+							<a href="modals.html#02-medium">Medium</a>
 						</li>
 					</ul>
 				</li>
@@ -179,7 +194,7 @@
 
 <div class="f-item-notes" data-f-toggle="notes">
 	<h5>Details:</h5>
-	<p>This is the default button, no frills or modifying classes.</p>
+	<p>This is the default button, no frills or modifying classes. Rounded buttons such as this one (along with other size/color combinations) should be used on pages where there are multiple actions a user can take from one page, such as a configuration application.</p>
 
 </div>
 
@@ -536,6 +551,225 @@ The take up 100% of the width of their parent element.</p>
 &lt;a class&#x3D;&quot;button pill&quot;&gt;Default Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button large secondary pill&quot;&gt;Secondary Large Button&lt;/a&gt;
 &lt;a class&#x3D;&quot;button tiny destructive pill&quot;&gt;Destructive Tiny Button&lt;/a&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="06-minimal-buttons">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Minimal Buttons</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<a class="button-minimal">Minimal Button</a>
+</div>
+
+<div class="f-item-notes" data-f-toggle="notes">
+	<h5>Details:</h5>
+	<p>This is the default minimal button. Only text shows up, however a light grey background does show up on hover. This button style is to be used when there are too many potential actions on a page to give them all a normal button treatment, as well as the bottom buttons inside modals.</p>
+
+</div>
+
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<h5>CSS</h5>
+		<pre><code class="language-markup"><code>/*
+ * Minimal Button Styles
+ */
+ .button-minimal{
+   font-size: 18px;
+   font-family: scala-sans-reg;
+   font-weight: bold;
+   color: $primary-blue;
+   padding: 10px;
+   border-radius: 4px;
+
+   &:hover{
+     background-color: #f7f7fb;
+     cursor: pointer;
+     text-decoration: none;
+   }
+ }</code>
+</code></pre>
+	<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;a class&#x3D;&quot;button-minimal&quot;&gt;Minimal Button&lt;/a&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="07-minimal-button-sizes">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Minimal Button Sizes</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<a class="button-minimal large">Large Minimal Button</a>
+<a class="button-minimal medium">Medium Minimal Button</a>
+<a class="button-minimal small">Small Minimal Button</a>
+<a class="button-minimal tiny">Tiny Minimal Button</a>
+</div>
+
+<div class="f-item-notes" data-f-toggle="notes">
+	<h5>Details:</h5>
+	<p>Minimal buttons can also have modifying classes to control their size.</p>
+
+</div>
+
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<h5>CSS</h5>
+		<pre><code class="language-markup"><code>/*
+ * Minimal Button Sizes
+ */
+ &.large {
+   font-size: 20px;
+   padding: 20px;
+ }
+
+ &.medium {
+   font-size: 16px;
+   padding: 13px;
+ }
+
+ &.small {
+   font-size: 14px;
+   padding: 9px;
+ }
+
+ &.tiny {
+   font-size: 13px;
+   padding: 5px;
+ }</code>
+</code></pre>
+	<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;a class&#x3D;&quot;button-minimal large&quot;&gt;Large Minimal Button&lt;/a&gt;
+&lt;a class&#x3D;&quot;button-minimal medium&quot;&gt;Medium Minimal Button&lt;/a&gt;
+&lt;a class&#x3D;&quot;button-minimal small&quot;&gt;Small Minimal Button&lt;/a&gt;
+&lt;a class&#x3D;&quot;button-minimal tiny&quot;&gt;Tiny Minimal Button&lt;/a&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="08-minimal-button-colors">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Minimal Button Colors</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<a class="button-minimal primary">Primary Minimal Button</a>
+<a class="button-minimal destructive">Destructive Minimal Button</a>
+</div>
+
+<div class="f-item-notes" data-f-toggle="notes">
+	<h5>Details:</h5>
+	<p>Minimal buttons can be either the primary color (most common use) or the destructive color (for destructive actions such as deleting something.)</p>
+
+</div>
+
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<h5>CSS</h5>
+		<pre><code class="language-markup"><code>/*
+ * Minimal Button Colors
+ */
+ &.primary {
+   color: $primary-blue;
+
+   &:hover {
+     background-color: #f7f7fb;
+     cursor: pointer;
+     text-decoration: none;
+   }
+ }
+
+ &.destructive {
+   color: $red;
+
+   &:hover {
+     background-color: #f7f7fb;
+     cursor: pointer;
+     text-decoration: none;
+   }
+ }</code>
+</code></pre>
+	<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;a class&#x3D;&quot;button-minimal primary&quot;&gt;Primary Minimal Button&lt;/a&gt;
+&lt;a class&#x3D;&quot;button-minimal destructive&quot;&gt;Destructive Minimal Button&lt;/a&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="09-minimal-buttons-with-icons">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Minimal Buttons With Icons</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<a class="button-minimal primary"><i class="far fa-pencil"></i> Minimal w/Icon</a>
+</div>
+
+<div class="f-item-notes" data-f-toggle="notes">
+	<h5>Details:</h5>
+	<p>Minimal buttons may also have icons when appropriate. Such as an &quot;edit&quot; action in a configuration app. The icons should be FontAwesome Regular characters.</p>
+
+</div>
+
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;a class&#x3D;&quot;button-minimal primary&quot;&gt;&lt;i class&#x3D;&quot;far fa-pencil&quot;&gt;&lt;/i&gt; Minimal w/Icon&lt;/a&gt;</code></pre>
 </div>
 
 
