@@ -1,0 +1,43 @@
+ <button class="trigger3 button primary small">Click here to trigger the Large modal!</button>
+  <div class="modal" id="m3">
+ 		 <div class="modal-content modal-large">
+         <div class="modal-header">
+ 				  <h1>Cats have been groomed</h1>
+         </div>
+         <div class="modal-body">
+ 				  <p>Due to inactivity your cats became matted and needed grooming. Don’t worry, we took care of that for you. You can find your newly groomed cat’s in the “My Profile” section of the application enjoying their fresh new look! </p>
+         </div>
+         <div class="modal-buttons">
+            <div class="modal-buttons-left">
+              <a class="c3 button-minimal">Cancel</a>
+            </div>
+            <div class="modal-buttons-center">
+              <div class="pipe"></div>
+            </div>
+            <div class="modal-buttons-right">
+              <a class="button-minimal">Next</a>
+            </div>
+          </div>
+ 		 </div>
+  </div>
+
+
+<script>
+    /* Large Modal */
+        var modal3 = document.querySelector("#m3");
+        var trigger3 = document.querySelector(".trigger3");
+        var closeButton3 = document.querySelector(".c3");
+
+        function toggleModal3() {
+            modal3.classList.toggle("show-modal");
+        }
+
+        function windowOnClick(event) {
+            if (event.target === modal3) {
+                toggleModal3();
+            }
+        }
+
+        trigger3.addEventListener("click", toggleModal3);
+        closeButton3.addEventListener("click", toggleModal3);
+</script>

@@ -2,6 +2,26 @@
  * Input Styles
  */
 
+
+/*** Error Mixin ***/
+@mixin error-message{
+  border: 1px solid $error-red;
+  margin-bottom: 5px;
+
+  & ~ .form-hint{
+    color: $error-red;
+    margin-block-start: 0px;
+    -webkit-margin-before: 0px;
+    display: inline-block;
+  }
+}
+
+/*** Standard Label ***/
+.standard-label{
+  margin-top: 20px;
+}
+
+/*** Text Input ****/
 input[type=text], label {
      display:block;
  }
@@ -13,7 +33,29 @@ input[type=text] {
     font-size: 15px;
     font-family: scala-sans-reg;
     margin-top: 10px;
+    margin-bottom: 20px;
  }
+
+ .form-hint {
+     display: none;
+ }
+
+ input[type=text]:invalid {
+     @include error-message;
+  }
+
+  input[type=text]:disabled {
+      border: 1px solid $gray;
+      color: $medium-gray;
+      background-color: $light-gray;
+      width: 550px;
+      padding: 10px;
+      font-size: 15px;
+      font-family: scala-sans-reg;
+      margin-top: 10px;
+   }
+
+
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: $gray;
@@ -46,16 +88,16 @@ select{
   position: relative;
 }
 
-/*To remove button from IE11, thank you Matt */
+/*To remove button from IE11*/
 select::-ms-expand {
      display: none;
 }
 
 .selectdiv:after {
-  content: '▾';
-  font-family: scala-sans-reg;
-  color: $dark-gray;
-  left: 550px;
+  content:"\f078";
+  font-family: "Font Awesome 5 Pro";
+  color: $primary-blue;
+  left: 545px;
   top: 20px;
   padding: 0 0 2px;
   position: absolute;
@@ -83,17 +125,16 @@ select::-ms-expand {
   word-break: normal;
 }
 
-select-old{
-  border: 1px solid $gray;
-  width: 570px;
-  height: 34px;
-  padding: 10px;
-  font-size: 15px;
-  font-family: scala-sans-reg;
-  margin-top: 10px;
-  -webkit-border-radius: 0px;
-  background-color: $white;
+.selectdiv select:disabled{
+  background-color: $light-gray;
+  color: $medium-gray;
 }
+
+.selectdiv select:invalid {
+  @include error-message;
+ }
+
+/**** Textarea ****/
 
 textarea{
   border: 1px solid $gray;
@@ -102,9 +143,19 @@ textarea{
   font-size: 15px;
   font-family: scala-sans-reg;
   margin-top: 10px;
+  display: block;
 }
 
-/* Checkbox */
+textarea:disabled{
+  background-color: $light-gray;
+  color: $medium-gray;
+}
+
+textarea:invalid{
+  @include error-message;
+}
+
+/**** Checkbox ****/
 .checkbox input[type="checkbox"] {
     opacity: 0;
     display: none;
@@ -113,9 +164,9 @@ textarea{
 .checkbox label {
     position: relative;
     display: inline-block;
-
     /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
-    padding-left: 22px;
+    padding-left: 25px;
+    margin-bottom: 15px;
 }
 
 .checkbox label::before,
@@ -131,14 +182,10 @@ textarea{
 .checkbox label::before{
     height: 17px;
     width: 17px;
-
     border: 1px solid $dark-gray;
     left: 0px;
-
-    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
-     *to vertically center it.
-     */
     top: -3px;
+    cursor: pointer;
 }
 
 /*Checkmark of the fake checkbox*/
@@ -147,9 +194,7 @@ textarea{
     width: 9px;
     border-left: 2px solid;
     border-bottom: 2px solid;
-
     transform: rotate(-45deg);
-
     left: 4px;
     top: 1px;
 }
@@ -169,13 +214,24 @@ textarea{
     border-color: $primary-blue;
 }
 
-/* Radio Buttons */
+/*disabled checked state*/
+.checkbox input[type="checkbox"]:checked:disabled + label::after {
+    content: "";
+    color: $medium-gray;
+}
+
+.checkbox input[type="checkbox"]:disabled + label::before {
+    border-color: $medium-gray;
+    background-color: $gray;
+}
+
+
+/**** Radio Buttons ****/
 .control {
-	font-size: 18px;
 	position: relative;
 	display: block;
 	margin-bottom: 15px;
-	padding-left: 30px;
+	padding-left: 27px;
 	cursor: pointer;
 }
 
@@ -187,39 +243,28 @@ textarea{
 
 .control__indicator {
 	position: absolute;
-	top: 2px;
+	top: -4px;
 	left: 0;
 	width: 20px;
 	height: 20px;
-	background: #e6e6e6;
+	background: $white;
+  border: 1px solid $dark-gray;
 }
 
 .control--radio .control__indicator {
 	border-radius: 50%;
 }
 
-/* Hover and focus states */
-.control:hover input ~ .control__indicator,
-.control input:focus ~ .control__indicator {
-	background: $light-gray;
-}
-
 /* Checked state */
 .control input:checked ~ .control__indicator {
-	background: $primary-blue;
-}
-
-/* Hover state whilst checked */
-.control:hover input:not([disabled]):checked ~ .control__indicator,
-.control input:checked:focus ~ .control__indicator {
-	background: $primary-blue;
+	background: $white;
 }
 
 /* Disabled state */
 .control input:disabled ~ .control__indicator {
 	pointer-events: none;
 	opacity: .6;
-	background: $light-gray;
+	background: $gray;
 }
 
 /* Check mark */
@@ -247,20 +292,38 @@ textarea{
 
 /* Disabled tick colour */
 .control--checkbox input:disabled ~ .control__indicator:after {
-	border-color: #7b7b7b;
+	border-color: $medium-gray;
 }
 
 /* Radio button inner circle */
 .control--radio .control__indicator:after {
-	top: 7px;
-	left: 7px;
-	width: 6px;
-	height: 6px;
+	top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
 	border-radius: 50%;
-	background: #fff;
+	background: $primary-blue;
 }
 
 /* Disabled circle colour */
 .control--radio input:disabled ~ .control__indicator:after {
-	background: #7b7b7b;
+	background: $medium-gray;
+}
+
+/*** Fieldset Styles ***/
+fieldset{
+  border: 0px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-end: 0;
+  margin-top: 20px;
+}
+
+legend{
+  margin-bottom: 15px;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
 }

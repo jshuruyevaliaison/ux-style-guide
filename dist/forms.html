@@ -6,7 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title></title>
+	<title>Liaison UX Style Guide | Forms</title>
 
 	<link rel="stylesheet" href="assets/fabricator/styles/f.css">
 
@@ -125,6 +125,9 @@
 						<li>
 							<a href="forms.html#05-radio">Radio</a>
 						</li>
+						<li>
+							<a href="forms.html#06-validation">Validation</a>
+						</li>
 					</ul>
 				</li>
 				<li>
@@ -135,6 +138,9 @@
 						</li>
 						<li>
 							<a href="modals.html#02-medium">Medium</a>
+						</li>
+						<li>
+							<a href="modals.html#03-large">Large</a>
 						</li>
 					</ul>
 				</li>
@@ -177,11 +183,6 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Text Input</h2>
 		<div class="f-item-controls">
-			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-				<svg>
-					<use xlink:href="#f-icon-notes" />
-				</svg>
-			</span>
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
@@ -189,28 +190,28 @@
 			</span>
 		</div>
 	</div><div class="f-item-preview">
-	<label for="textInput">Text input</label>
+	<label for="textInput" class="standard-label">Text input 1</label>
 <input type="text" id="textInput" placeholder="placeholder text" />
+
+<label for="textInput" class="standard-label">Text input 2</label>
+<input type="text" id="textInput" placeholder="placeholder text" value="filled out field value" />
+
+<label for="textInput" class="standard-label">Disabled text input</label>
+<input type="text" id="textInput" value="placeholder text" disabled="disabled" />
 </div>
 
-<div class="f-item-notes" data-f-toggle="notes">
-	<h5>Details:</h5>
-	<p>
-border: 1px solid $gray;<br/>
-width: 550px;<br/>
-padding: 10px;<br/>
-font-size: 15px;<br/>
-font-family: scala-sans-reg;<br/>
-margin-top: 10px;
-</p>
-
-</div>
 
 
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<h5>HTML</h5>
-		<pre><code class="language-markup">&lt;label for&#x3D;&quot;textInput&quot;&gt;Text input&lt;/label&gt;
-&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;textInput&quot; placeholder&#x3D;&quot;placeholder text&quot; /&gt;</code></pre>
+		<pre><code class="language-markup">&lt;label for&#x3D;&quot;textInput&quot; class&#x3D;&quot;standard-label&quot;&gt;Text input 1&lt;/label&gt;
+&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;textInput&quot; placeholder&#x3D;&quot;placeholder text&quot; /&gt;
+
+&lt;label for&#x3D;&quot;textInput&quot; class&#x3D;&quot;standard-label&quot;&gt;Text input 2&lt;/label&gt;
+&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;textInput&quot; placeholder&#x3D;&quot;placeholder text&quot; value&#x3D;&quot;filled out field value&quot; /&gt;
+
+&lt;label for&#x3D;&quot;textInput&quot; class&#x3D;&quot;standard-label&quot;&gt;Disabled text input&lt;/label&gt;
+&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;textInput&quot; value&#x3D;&quot;placeholder text&quot; disabled&#x3D;&quot;disabled&quot; /&gt;</code></pre>
 </div>
 
 
@@ -229,16 +230,26 @@ margin-top: 10px;
 			</span>
 		</div>
 	</div><div class="f-item-preview">
-	<div class="selectdiv">
-	<label>
-		<select>
-			<option value="">Option 1</option>
-			<option value="">Option 2</option>
-			<option value="">Option 3</option>
-			<option value="">Option 4</option>
-			<option value="">Option 5</option>
-		</select>
-	</label>
+	<label for="normal-select" class="standard-label">Normal Select</label>
+<div class="selectdiv">
+	<select id="normal-select">
+		<option value="">Option 1</option>
+		<option value="">Option 2</option>
+		<option value="">Option 3</option>
+		<option value="">Option 4</option>
+		<option value="">Option 5</option>
+	</select>
+</div>
+
+<label for="disabled-select" class="standard-label">Disabled Select</label>
+<div class="selectdiv">
+	<select id="disabled-select" disabled="disabled">
+		<option value="">Option 1</option>
+		<option value="">Option 2</option>
+		<option value="">Option 3</option>
+		<option value="">Option 4</option>
+		<option value="">Option 5</option>
+	</select>
 </div>
 </div>
 
@@ -246,16 +257,26 @@ margin-top: 10px;
 
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<h5>HTML</h5>
-		<pre><code class="language-markup">&lt;div class&#x3D;&quot;selectdiv&quot;&gt;
-	&lt;label&gt;
-		&lt;select&gt;
-			&lt;option value&#x3D;&quot;&quot;&gt;Option 1&lt;/option&gt;
-			&lt;option value&#x3D;&quot;&quot;&gt;Option 2&lt;/option&gt;
-			&lt;option value&#x3D;&quot;&quot;&gt;Option 3&lt;/option&gt;
-			&lt;option value&#x3D;&quot;&quot;&gt;Option 4&lt;/option&gt;
-			&lt;option value&#x3D;&quot;&quot;&gt;Option 5&lt;/option&gt;
-		&lt;/select&gt;
-	&lt;/label&gt;
+		<pre><code class="language-markup">&lt;label for&#x3D;&quot;normal-select&quot; class&#x3D;&quot;standard-label&quot;&gt;Normal Select&lt;/label&gt;
+&lt;div class&#x3D;&quot;selectdiv&quot;&gt;
+	&lt;select id&#x3D;&quot;normal-select&quot;&gt;
+		&lt;option value&#x3D;&quot;&quot;&gt;Option 1&lt;/option&gt;
+		&lt;option value&#x3D;&quot;&quot;&gt;Option 2&lt;/option&gt;
+		&lt;option value&#x3D;&quot;&quot;&gt;Option 3&lt;/option&gt;
+		&lt;option value&#x3D;&quot;&quot;&gt;Option 4&lt;/option&gt;
+		&lt;option value&#x3D;&quot;&quot;&gt;Option 5&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/div&gt;
+
+&lt;label for&#x3D;&quot;disabled-select&quot; class&#x3D;&quot;standard-label&quot;&gt;Disabled Select&lt;/label&gt;
+&lt;div class&#x3D;&quot;selectdiv&quot;&gt;
+	&lt;select id&#x3D;&quot;disabled-select&quot; disabled&#x3D;&quot;disabled&quot;&gt;
+		&lt;option value&#x3D;&quot;&quot;&gt;Option 1&lt;/option&gt;
+		&lt;option value&#x3D;&quot;&quot;&gt;Option 2&lt;/option&gt;
+		&lt;option value&#x3D;&quot;&quot;&gt;Option 3&lt;/option&gt;
+		&lt;option value&#x3D;&quot;&quot;&gt;Option 4&lt;/option&gt;
+		&lt;option value&#x3D;&quot;&quot;&gt;Option 5&lt;/option&gt;
+	&lt;/select&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
@@ -268,11 +289,6 @@ margin-top: 10px;
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Textarea</h2>
 		<div class="f-item-controls">
-			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-				<svg>
-					<use xlink:href="#f-icon-notes" />
-				</svg>
-			</span>
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
@@ -280,25 +296,22 @@ margin-top: 10px;
 			</span>
 		</div>
 	</div><div class="f-item-preview">
-	<textarea name="" id="" cols="30" rows="10"></textarea>
+	<label for="normal-textarea" class="standard-label">Normal Textarea</label>
+<textarea name="" id="normal-textarea" cols="30" rows="10"></textarea>
+
+<label for="disabled-textarea" class="standard-label">Disabled Textarea</label>
+<textarea name="" id="disabled-textarea" cols="30" rows="10" disabled="disabled">Disabled Textarea</textarea>
 </div>
 
-<div class="f-item-notes" data-f-toggle="notes">
-	<h5>Details:</h5>
-	<p>border: 1px solid $gray;<br/>
-width: 550px;<br/>
-padding: 10px;<br/>
-font-size: 15px;<br/>
-font-family: scala-sans-reg;<br/>
-margin-top: 10px;
-</p>
-
-</div>
 
 
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<h5>HTML</h5>
-		<pre><code class="language-markup">&lt;textarea name&#x3D;&quot;&quot; id&#x3D;&quot;&quot; cols&#x3D;&quot;30&quot; rows&#x3D;&quot;10&quot;&gt;&lt;/textarea&gt;</code></pre>
+		<pre><code class="language-markup">&lt;label for&#x3D;&quot;normal-textarea&quot; class&#x3D;&quot;standard-label&quot;&gt;Normal Textarea&lt;/label&gt;
+&lt;textarea name&#x3D;&quot;&quot; id&#x3D;&quot;normal-textarea&quot; cols&#x3D;&quot;30&quot; rows&#x3D;&quot;10&quot;&gt;&lt;/textarea&gt;
+
+&lt;label for&#x3D;&quot;disabled-textarea&quot; class&#x3D;&quot;standard-label&quot;&gt;Disabled Textarea&lt;/label&gt;
+&lt;textarea name&#x3D;&quot;&quot; id&#x3D;&quot;disabled-textarea&quot; cols&#x3D;&quot;30&quot; rows&#x3D;&quot;10&quot; disabled&#x3D;&quot;disabled&quot;&gt;Disabled Textarea&lt;/textarea&gt;</code></pre>
 </div>
 
 
@@ -318,8 +331,23 @@ margin-top: 10px;
 		</div>
 	</div><div class="f-item-preview">
 	<div class="checkbox">
-	<input type="checkbox" id="checkbox_1">
-	<label for="checkbox_1">Checkbox</label>
+	<input type="checkbox" id="checkbox_1" checked="checked">
+	<label for="checkbox_1">First Checkbox</label>
+</div>
+
+<div class="checkbox">
+	<input type="checkbox" id="checkbox_2">
+	<label for="checkbox_2">Second Checkbox</label>
+</div>
+
+<div class="checkbox">
+	<input type="checkbox" id="checkbox_3" disabled="disabled">
+	<label for="checkbox_3">Disabled</label>
+</div>
+
+<div class="checkbox">
+	<input type="checkbox" id="checkbox_4" disabled="disabled" checked="checked">
+	<label for="checkbox_4">Disabled & Checked</label>
 </div>
 </div>
 
@@ -328,8 +356,23 @@ margin-top: 10px;
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<h5>HTML</h5>
 		<pre><code class="language-markup">&lt;div class&#x3D;&quot;checkbox&quot;&gt;
-	&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;checkbox_1&quot;&gt;
-	&lt;label for&#x3D;&quot;checkbox_1&quot;&gt;Checkbox&lt;/label&gt;
+	&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;checkbox_1&quot; checked&#x3D;&quot;checked&quot;&gt;
+	&lt;label for&#x3D;&quot;checkbox_1&quot;&gt;First Checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;checkbox&quot;&gt;
+	&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;checkbox_2&quot;&gt;
+	&lt;label for&#x3D;&quot;checkbox_2&quot;&gt;Second Checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;checkbox&quot;&gt;
+	&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;checkbox_3&quot; disabled&#x3D;&quot;disabled&quot;&gt;
+	&lt;label for&#x3D;&quot;checkbox_3&quot;&gt;Disabled&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;checkbox&quot;&gt;
+	&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;checkbox_4&quot; disabled&#x3D;&quot;disabled&quot; checked&#x3D;&quot;checked&quot;&gt;
+	&lt;label for&#x3D;&quot;checkbox_4&quot;&gt;Disabled &amp; Checked&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
@@ -387,6 +430,74 @@ margin-top: 10px;
 	&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio2&quot; disabled&#x3D;&quot;disabled&quot; checked&#x3D;&quot;checked&quot; /&gt;
 	&lt;div class&#x3D;&quot;control__indicator&quot;&gt;&lt;/div&gt;
 &lt;/label&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="06-validation">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Validation</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<label for="textInput">Text input with error</label>
+<input type="text" id="textInput" placeholder="invalid value" required />
+<p class="form-hint">Error message here</p>
+
+
+<div class="selectdiv">
+	<label>
+		<select required>
+			<option value="" disabled selected>Select an Option</option>
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3</option>
+			<option value="4">Option 4</option>
+			<option value="5">Option 5</option>
+		</select>
+	</label>
+</div>
+<p class="form-hint">Error message here</p>
+
+
+<textarea name="" id="" cols="30" rows="10" required></textarea>
+<p class="form-hint">Error message here</p>
+</div>
+
+
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;label for&#x3D;&quot;textInput&quot;&gt;Text input with error&lt;/label&gt;
+&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;textInput&quot; placeholder&#x3D;&quot;invalid value&quot; required /&gt;
+&lt;p class&#x3D;&quot;form-hint&quot;&gt;Error message here&lt;/p&gt;
+
+
+&lt;div class&#x3D;&quot;selectdiv&quot;&gt;
+	&lt;label&gt;
+		&lt;select required&gt;
+			&lt;option value&#x3D;&quot;&quot; disabled selected&gt;Select an Option&lt;/option&gt;
+			&lt;option value&#x3D;&quot;1&quot;&gt;Option 1&lt;/option&gt;
+			&lt;option value&#x3D;&quot;2&quot;&gt;Option 2&lt;/option&gt;
+			&lt;option value&#x3D;&quot;3&quot;&gt;Option 3&lt;/option&gt;
+			&lt;option value&#x3D;&quot;4&quot;&gt;Option 4&lt;/option&gt;
+			&lt;option value&#x3D;&quot;5&quot;&gt;Option 5&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;p class&#x3D;&quot;form-hint&quot;&gt;Error message here&lt;/p&gt;
+
+
+&lt;textarea name&#x3D;&quot;&quot; id&#x3D;&quot;&quot; cols&#x3D;&quot;30&quot; rows&#x3D;&quot;10&quot; required&gt;&lt;/textarea&gt;
+&lt;p class&#x3D;&quot;form-hint&quot;&gt;Error message here&lt;/p&gt;</code></pre>
 </div>
 
 

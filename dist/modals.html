@@ -6,7 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title></title>
+	<title>Liaison UX Style Guide | Modals</title>
 
 	<link rel="stylesheet" href="assets/fabricator/styles/f.css">
 
@@ -125,6 +125,9 @@
 						<li>
 							<a href="forms.html#05-radio">Radio</a>
 						</li>
+						<li>
+							<a href="forms.html#06-validation">Validation</a>
+						</li>
 					</ul>
 				</li>
 				<li>
@@ -135,6 +138,9 @@
 						</li>
 						<li>
 							<a href="modals.html#02-medium">Medium</a>
+						</li>
+						<li>
+							<a href="modals.html#03-large">Large</a>
 						</li>
 					</ul>
 				</li>
@@ -169,7 +175,7 @@
 
 
 	
-<h1 data-f-toggle="labels">Modals</h1> 
+<h1 data-f-toggle="labels">Modals</h1>
 
 
 <div class="f-item-group" id="01-small">
@@ -185,16 +191,16 @@
 		</div>
 	</div><div class="f-item-preview">
 	<button class="trigger1 button primary small">Click here to trigger the Small modal!</button>
-<div class="modal show-modal" id="m1">
+<div class="modal" id="m1">
 	<div class="modal-content modal-small">
 		<div class="modal-header">
 			<h1>Cats have been groomed</h1>
 		</div>
 		<div class="modal-body">
 			<p>Due to inactivity your cats became matted and needed grooming. Don’t worry, we took care of that for you. You can find your newly groomed cat’s in the “My Profile” section of the application enjoying their fresh new look! </p>
-			<div class="modal-button">
-				<a class="close-button c1 button-minimal">Okay</a>
-			</div>
+		</div>
+		<div class="modal-button">
+			<a class="close-button c1 button-minimal">Okay</a>
 		</div>
 	</div>
 </div>
@@ -226,16 +232,16 @@
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<h5>HTML</h5>
 		<pre><code class="language-markup">&lt;button class&#x3D;&quot;trigger1 button primary small&quot;&gt;Click here to trigger the Small modal!&lt;/button&gt;
-&lt;div class&#x3D;&quot;modal show-modal&quot; id&#x3D;&quot;m1&quot;&gt;
+&lt;div class&#x3D;&quot;modal&quot; id&#x3D;&quot;m1&quot;&gt;
 	&lt;div class&#x3D;&quot;modal-content modal-small&quot;&gt;
 		&lt;div class&#x3D;&quot;modal-header&quot;&gt;
 			&lt;h1&gt;Cats have been groomed&lt;/h1&gt;
 		&lt;/div&gt;
 		&lt;div class&#x3D;&quot;modal-body&quot;&gt;
 			&lt;p&gt;Due to inactivity your cats became matted and needed grooming. Don’t worry, we took care of that for you. You can find your newly groomed cat’s in the “My Profile” section of the application enjoying their fresh new look! &lt;/p&gt;
-			&lt;div class&#x3D;&quot;modal-button&quot;&gt;
-				&lt;a class&#x3D;&quot;close-button c1 button-minimal&quot;&gt;Okay&lt;/a&gt;
-			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;modal-button&quot;&gt;
+			&lt;a class&#x3D;&quot;close-button c1 button-minimal&quot;&gt;Okay&lt;/a&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
@@ -369,6 +375,116 @@
 
 	trigger2.addEventListener(&quot;click&quot;, toggleModal2);
 	closeButton2.addEventListener(&quot;click&quot;, toggleModal2);
+&lt;/script&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="03-large">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Large</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<button class="trigger3 button primary small">Click here to trigger the Large modal!</button>
+<div class="modal" id="m3">
+	<div class="modal-content modal-large">
+		<div class="modal-header">
+			<h1>Cats have been groomed</h1>
+		</div>
+		<div class="modal-body">
+			<p>Due to inactivity your cats became matted and needed grooming. Don’t worry, we took care of that for you. You can find your newly groomed cat’s in the “My Profile” section of the application enjoying their fresh new look! </p>
+		</div>
+		<div class="modal-buttons">
+			<div class="modal-buttons-left">
+				<a class="c3 button-minimal">Cancel</a>
+			</div>
+			<div class="modal-buttons-center">
+				<div class="pipe"></div>
+			</div>
+			<div class="modal-buttons-right">
+				<a class="button-minimal">Next</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	/* Large Modal */
+	var modal3 = document.querySelector("#m3");
+	var trigger3 = document.querySelector(".trigger3");
+	var closeButton3 = document.querySelector(".c3");
+
+	function toggleModal3() {
+		modal3.classList.toggle("show-modal");
+	}
+
+	function windowOnClick(event) {
+		if (event.target === modal3) {
+			toggleModal3();
+		}
+	}
+
+	trigger3.addEventListener("click", toggleModal3);
+	closeButton3.addEventListener("click", toggleModal3);
+</script>
+</div>
+
+
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<h5>HTML</h5>
+		<pre><code class="language-markup">&lt;button class&#x3D;&quot;trigger3 button primary small&quot;&gt;Click here to trigger the Large modal!&lt;/button&gt;
+&lt;div class&#x3D;&quot;modal&quot; id&#x3D;&quot;m3&quot;&gt;
+	&lt;div class&#x3D;&quot;modal-content modal-large&quot;&gt;
+		&lt;div class&#x3D;&quot;modal-header&quot;&gt;
+			&lt;h1&gt;Cats have been groomed&lt;/h1&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;modal-body&quot;&gt;
+			&lt;p&gt;Due to inactivity your cats became matted and needed grooming. Don’t worry, we took care of that for you. You can find your newly groomed cat’s in the “My Profile” section of the application enjoying their fresh new look! &lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;modal-buttons&quot;&gt;
+			&lt;div class&#x3D;&quot;modal-buttons-left&quot;&gt;
+				&lt;a class&#x3D;&quot;c3 button-minimal&quot;&gt;Cancel&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;modal-buttons-center&quot;&gt;
+				&lt;div class&#x3D;&quot;pipe&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;modal-buttons-right&quot;&gt;
+				&lt;a class&#x3D;&quot;button-minimal&quot;&gt;Next&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;script&gt;
+	/* Large Modal */
+	var modal3 &#x3D; document.querySelector(&quot;#m3&quot;);
+	var trigger3 &#x3D; document.querySelector(&quot;.trigger3&quot;);
+	var closeButton3 &#x3D; document.querySelector(&quot;.c3&quot;);
+
+	function toggleModal3() {
+		modal3.classList.toggle(&quot;show-modal&quot;);
+	}
+
+	function windowOnClick(event) {
+		if (event.target &#x3D;&#x3D;&#x3D; modal3) {
+			toggleModal3();
+		}
+	}
+
+	trigger3.addEventListener(&quot;click&quot;, toggleModal3);
+	closeButton3.addEventListener(&quot;click&quot;, toggleModal3);
 &lt;/script&gt;</code></pre>
 </div>
 
