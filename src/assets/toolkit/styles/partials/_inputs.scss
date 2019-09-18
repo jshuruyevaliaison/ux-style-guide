@@ -210,6 +210,10 @@ textarea:invalid{
     color: $primary-blue;
 }
 
+.checkbox input[type="checkbox"]:checked + label {
+    font-weight: 900;
+}
+
 .checkbox input[type="checkbox"]:checked + label::before {
     border-color: $primary-blue;
 }
@@ -258,6 +262,11 @@ textarea:invalid{
 /* Checked state */
 .control input:checked ~ .control__indicator {
 	background: $white;
+  border: 1px solid $primary-blue;
+}
+
+.control input:checked ~ .label {
+	font-weight: 700;
 }
 
 /* Disabled state */
@@ -308,6 +317,10 @@ textarea:invalid{
 /* Disabled circle colour */
 .control--radio input:disabled ~ .control__indicator:after {
 	background: $medium-gray;
+}
+
+.control input:disabled:checked ~ .control__indicator{
+  border-color: $medium-gray;
 }
 
 /*** Fieldset Styles ***/
