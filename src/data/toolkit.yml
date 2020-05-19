@@ -3,6 +3,7 @@ colors:
     Primary Blue: "#0076C0"
     Secondary Blue: "#234078"
   grays:
+    White: "#FFFFFF"
     Light Gray: "#F7F7FB"
     Gray: "#C8C8CE"
     Medium Gray: "#75757D"
@@ -12,5 +13,5 @@ colors:
     Warning Orange: "#B35C00"
     Success Green: "#2f864f"
   branding:
-    Liaison Branding Green: "#b4bc42"
-    Liaison Branding Blue: "#213f7b"
+    Liaison Branding Green (Cannot be text color): "#b4bc42"
+    Liaison Branding Blue (Cannot be text color): "#213f7b"
