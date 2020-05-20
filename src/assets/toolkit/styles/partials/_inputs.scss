@@ -27,6 +27,7 @@ input[type=text] {
   border: 1px solid $gray;
   width: 550px;
   padding: 10px;
+  padding-top: 12px;
   font-size: 15px;
   font-family: scala-sans-reg;
   margin-top: 10px;
@@ -43,6 +44,7 @@ input[type=text]:disabled {
   background-color: $light-gray;
   width: 550px;
   padding: 10px;
+  padding-top: 12px;
   font-size: 15px;
   font-family: scala-sans-reg;
   margin-top: 10px;
@@ -96,7 +98,7 @@ select::-ms-expand {
   color: $primary-blue;
   left: 545px;
   top: 20px;
-  padding: 0 0 2px;
+  padding: 2px 0 2px;
   position: absolute;
   pointer-events: none;
 }
@@ -112,6 +114,7 @@ select::-ms-expand {
   border: 1px solid $gray;
   width: 570px;
   padding: 10px;
+  padding-top: 12px;
   font-size: 15px;
   font-family: scala-sans-reg;
   margin-top: 10px;

@@ -5,7 +5,7 @@ a.button,
 button {
   display: inline-block;
   font-size: 1em;
-  padding: 0.8em;
+  padding: 1em 0.8em 0.8em 0.8em;
   vertical-align: middle;
   margin: 0 0 1em;
   text-align: center;
@@ -66,27 +66,32 @@ button {
     }
   }
   /* Button Sizes */
+  /* Need to be converted to em */
   &.large {
     font-size: 20px;
     padding: 20px;
+    padding-top: 22px;
     min-width: 250px;
   }
 
   &.medium {
     font-size: 16px;
     padding: 13px;
+    padding-top: 15px;
     min-width: 250px;
   }
 
   &.small {
     font-size: 14px;
     padding: 9px;
+    padding-top: 11px;
     min-width: 175px;
   }
 
   &.tiny {
     font-size: 13px;
     padding: 5px;
+    padding-top: 7px;
   }
 
   &.expand {
