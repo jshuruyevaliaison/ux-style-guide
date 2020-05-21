@@ -81,6 +81,7 @@ select {
   font-family: scala-sans-reg;
   margin-top: 10px;
   -webkit-border-radius: 0;
+  border-radius: 0;
   background-color: $white;
 }
 
@@ -119,6 +120,7 @@ select::-ms-expand {
   font-family: scala-sans-reg;
   margin-top: 10px;
   -webkit-border-radius: 0;
+  border-radius: 0;
   background-color: $white;
   -ms-word-break: normal;
   word-break: normal;
