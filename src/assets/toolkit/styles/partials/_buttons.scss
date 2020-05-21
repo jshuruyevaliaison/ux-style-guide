@@ -21,7 +21,9 @@ button {
     color: $white;
     text-decoration: none;
   }
+
   /* Button Colors */
+
   &.primary {
     color: $white;
     background-color: $primary-blue;
@@ -65,8 +67,10 @@ button {
       cursor: default;
     }
   }
+
   /* Button Sizes */
   /* Need to be converted to em */
+
   &.large {
     font-size: 20px;
     padding: 20px;
@@ -101,6 +105,7 @@ button {
     padding-left: 0;
   }
   /*Border Radius */
+
   &.no-radius {
     border-radius: 0;
   }
@@ -109,6 +114,7 @@ button {
     border-radius: 50px;
   }
 }
+
 
 /* Minimal Buttons */
 
@@ -128,6 +134,7 @@ button.button-minimal{
   }
 
   /* Minimal Button Sizes */
+
   &.large {
     font-size: 20px;
     padding: 20px;
@@ -149,6 +156,7 @@ button.button-minimal{
   }
 
   /* Minimal Button Colors */
+
   &.primary {
     color: $primary-blue;
 

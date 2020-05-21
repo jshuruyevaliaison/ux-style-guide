@@ -22,12 +22,13 @@
 @import '../resources/fonts/fontawesome/css/all.css';
 
 @import 'partials/_colors';
+@import 'partials/_typography';
 @import 'partials/_buttons';
 @import 'partials/_inputs';
 @import 'partials/_modals';
-@import 'partials/_typography';
+
 
 
 body {
-	font-family: scala-sans-reg;
+	font-family: 'scala-sans-reg', sans-serif;
 }
