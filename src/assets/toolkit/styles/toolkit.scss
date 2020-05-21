@@ -1,21 +1,21 @@
 /**
- * Toolkit styles
- */
+	* Toolkit styles
+*/
 
- @font-face {
-     font-family: "scala-sans-reg";
-     src: url("../resources/fonts/scala/ScalaSansWeb.woff") format('woff');
- }
+@font-face {
+	font-family: "scala-sans-reg";
+		src: url("../resources/fonts/scala/ScalaSansWeb.woff") format('woff');
+	}
 
- @font-face {
-     font-family: "scala-sans-bld";
-     src: url("../resources/fonts/scala/ScalaSansWeb-Bold.woff") format('woff');
- }
+@font-face {
+	font-family: "scala-sans-bld";
+		src: url("../resources/fonts/scala/ScalaSansWeb-Bold.woff") format('woff');
+	}
 
- @font-face {
- 	font-family: "scala-reg";
-   src: url("../resources/fonts/scala/ScalaWeb.woff") format('woff');
- }
+@font-face {
+	font-family: "scala-reg";
+		src: url("../resources/fonts/scala/ScalaWeb.woff") format('woff');
+	}
 
 
 
@@ -29,5 +29,5 @@
 
 
 body {
-  font-family: scala-sans-reg;
+	font-family: scala-sans-reg;
 }
